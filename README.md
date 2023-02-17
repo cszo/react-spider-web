@@ -1,5 +1,7 @@
 # react-spider-web
 
+Create React apps with no build configuration.X
+
 This is a React CLI base station! Let's play with CLI!!!
 
 ## steps
@@ -23,3 +25,4 @@ npx eslint --init
 Maybe you should learn some knowledge about [eslint Node API](https://github.com/standard/eslint-config-standard-with-typescript)
 
 ### step3:debug
+
