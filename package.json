@@ -1,0 +1,35 @@
+{
+  "name": "react-spider-web",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "rsw-cli": "lib/bin/index.js"
+  },
+  "scripts": {
+    "prepublishOnly": "tsc",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "cszo",
+  "license": "ISC",
+  "authoEamil": "876699786@qq.com",
+  "devDependencies": {
+    "@types/node": "^18.13.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "eslint": "^8.33.0",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.32.2",
+    "typescript": "*"
+  },
+  "dependencies": {
+    "@types/eslint": "^8.21.1",
+    "chalk": "4.1.2",
+    "commander": "^10.0.0",
+    "ora": "5.4.1",
+    "react-spider-web": "^0.0.1"
+  }
+}
