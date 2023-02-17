@@ -2,7 +2,16 @@
 
 This is a React CLI base station! Let's play with CLI!!!
 
-## steps
+## how to use
+
+  cd your project
+
+```bash
+  npm install react-spider-web
+  rsw-cli eslint
+```
+
+## records
 
 ### steps1:init
 
