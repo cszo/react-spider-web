@@ -1,14 +1,43 @@
 #!/usr/bin/env node
-import { Command } from "commander"
-const program = new Command()
 
-import { getEslint } from "../eslint"
+import * as path from "path";
+import alias from "module-alias";
+const packageConfig = require("../../package.json")
 
-program
-  .version("0.0.1")
-  .description("start eslint and fix code")
-  .command("eslint")
-  .action(() => {
-    getEslint()
+alias(path.resolve(__dirname, "../../"));
+
+import { Command } from 'commander';
+
+import internallyCommand from './internally'
+
+import { initExtraPack } from './extra'
+
+const program = new Command(packageConfig.commandName);
+
+export interface ICommand {
+  description: string
+  command: string
+  action: (value?: any) => void
+}
+
+const initCommand = (commandConfig: ICommand[]) => {
+  commandConfig.forEach(config => {
+    const { description, command, action } = config
+    program
+      .version(packageConfig.version)
+      .description(description)
+      .command(command)
+      .action((value) => {
+        action(value)
+      })
   })
-program.parse(process.argv)
+}
+
+const init = () => {
+  const extraPacks = initExtraPack()
+  initCommand([...internallyCommand, ...extraPacks])
+}
+
+init()
+
+program.parse(process.argv);

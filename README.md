@@ -1,19 +1,22 @@
-# react-spider-web
+# @react-spider-web/rsw-base-cli
 
-All the best practices tools for react app
+## 安装
 
-## install
+```bash
+npm install @react-spider-web/rsw-base-cli --save-dev
+# or
+yarn add @react-spider-web/rsw-base-cli
 
-```sh
-  npm install react-spider-web
 ```
 
-## how to use
+## 使用
 
-### eslint your react project
+初始化模版项目
 
-  cd your project
-
-```sh
-  rsw-cli eslint
+```bash
+rsw init tpl  
 ```
+
+## LICENSE
+
+[MIT](https://en.wikipedia.org/wiki/MIT_License)
